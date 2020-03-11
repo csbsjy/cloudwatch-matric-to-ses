@@ -1,0 +1,17 @@
+import json
+import boto3
+import base64
+import metric_sources from metric_sources
+from botocore.exceptions import ClientError
+
+cloudwatch = boto3.client('cloudwatch')
+
+
+def lambda_handler(event, context):
+    for metric_data in metric_sources:
+        metric_data = json.dumps(metric_data)
+
+        print(f'metric data : {metric_data}')
+        image_data = cloudwatch.get_metric_widget_image(MetricWidget=metric_data)
+        print(f'metric data : {image_data}')
+        print(base64.b64encode(image_data['MetricWidgetImage']).decode("UTF-8"))

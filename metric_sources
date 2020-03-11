@@ -1,0 +1,10 @@
+metric_sources = [
+    {
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+            ["AWS/EC2", "CPUUtilization", "InstanceId", "i-0cdcc795492311635"]
+        ],
+        "region": "ap-northeast-2"
+    }
+]
