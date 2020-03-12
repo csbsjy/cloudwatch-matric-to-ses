@@ -2,8 +2,20 @@ metric_sources = [
     {
         "view": "timeSeries",
         "stacked": false,
+        "region": "ap-northeast-2",
         "metrics": [
-            ["AWS/EC2", "CPUUtilization", "InstanceId", "i-0cdcc795492311635"]
+            ["AWS/EC2", "CPUUtilization", "InstanceId", "i-056692ca6cb93b741"],
+            ["...", "i-05f19c436e4da7065"],
+            ["...", "i-0ec4bd0d8a0a34a2a"],
+            ["...", "i-0bdb7f2902eddb6d7"]
+        ]
+    },
+    {
+        "view": "timeSeries",
+        "stacked": false,
+        "metrics": [
+            ["AWS/RDS", "CPUCreditBalance", "DBInstanceIdentifier", "ldps-dev-bdp-mysql"],
+            ["...", "ldps-dev-dbt-mysql"]
         ],
         "region": "ap-northeast-2"
     }
