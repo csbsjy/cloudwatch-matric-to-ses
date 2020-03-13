@@ -7,6 +7,7 @@ from email.mime.application import MIMEApplication
 
 from daily_report_form import daily_report_form
 
+
 EMAIL_HOST = os.environ['EMAIL_ADDRESS']
 EMAIL_TARGET = os.environ['EMAIL_TARGET']
 EMAIL_APPKEY = os.environ['EMAIL_APP_KEY']
@@ -22,7 +23,10 @@ def send_email(daily_report_data):
 
     msg_alternative = MIMEMultipart('alternative')
     msg.attach(msg_alternative)
-    msg_text = MIMEText(daily_report_form, 'html')
+    with open('template/daily-report.html', 'r') as f:
+        html_string = f.read()
+    msg_text = MIMEText(html_string, 'html')
+    # msg_text = MIMEText(daily_report_form, 'html')
     msg_alternative.attach(msg_text)
 
     image_id_list = ['<cpu_credit>', '<cpu_utilization>']
