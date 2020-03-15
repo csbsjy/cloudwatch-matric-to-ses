@@ -1,7 +1,17 @@
 metric_sources = [
     {
+        "view": "singleValue",
+        "stacked": False,
+        "region": "ap-northeast-2",
+        "metrics": [
+            ["AWS/ApplicationELB", "RequestCount", "LoadBalancer", "app/ldps-dev-alb-inf-api-was-01/9df2a0a80ee66881"],
+            ["...", "app/ldps-dev-alb-bdp-was-01/f14ebb91d694f572"]
+        ],
+        "title": "ALB Request 카운트"
+    },
+    {
         "view": "timeSeries",
-        "stacked": false,
+        "stacked": False,
         "region": "ap-northeast-2",
         "metrics": [
             ["AWS/EC2", "CPUUtilization", "InstanceId", "i-056692ca6cb93b741"],
@@ -12,7 +22,7 @@ metric_sources = [
     },
     {
         "view": "timeSeries",
-        "stacked": false,
+        "stacked": False,
         "metrics": [
             ["AWS/RDS", "CPUCreditBalance", "DBInstanceIdentifier", "ldps-dev-bdp-mysql"],
             ["...", "ldps-dev-dbt-mysql"]

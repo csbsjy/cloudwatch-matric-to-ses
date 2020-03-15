@@ -5,7 +5,6 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
 
-from daily_report_form import daily_report_form
 
 
 EMAIL_HOST = os.environ['EMAIL_ADDRESS']
@@ -29,7 +28,7 @@ def send_email(daily_report_data):
     # msg_text = MIMEText(daily_report_form, 'html')
     msg_alternative.attach(msg_text)
 
-    image_id_list = ['<cpu_credit>', '<cpu_utilization>']
+    image_id_list = ['<count_example>', '<cpu_credit>', '<cpu_utilization>']
 
     for index, singleData in enumerate(daily_report_data):
         image = singleData
