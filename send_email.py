@@ -5,11 +5,12 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
 
-
+from image_id_list import image_id_list;
 
 EMAIL_HOST = os.environ['EMAIL_ADDRESS']
 EMAIL_TARGET = os.environ['EMAIL_TARGET']
 EMAIL_APPKEY = os.environ['EMAIL_APP_KEY']
+
 
 def send_email(daily_report_data):
     smtp = smtplib.SMTP('smtp.gmail.com', 587)
@@ -25,10 +26,9 @@ def send_email(daily_report_data):
     with open('template/daily-report.html', 'r') as f:
         html_string = f.read()
     msg_text = MIMEText(html_string, 'html')
-    # msg_text = MIMEText(daily_report_form, 'html')
     msg_alternative.attach(msg_text)
 
-    image_id_list = ['<count_example>', '<cpu_credit>', '<cpu_utilization>']
+
 
     for index, singleData in enumerate(daily_report_data):
         image = singleData
@@ -36,7 +36,6 @@ def send_email(daily_report_data):
         image_id = image_id_list[index]
         msg_image.add_header('Content-ID', image_id)
         msg.attach(msg_image)
-
 
     smtp.sendmail(EMAIL_HOST, EMAIL_TARGET, msg.as_string())
 

@@ -17,14 +17,85 @@
             </div>
         </div>
         <br/><br/>
-        <div style="text-align: center"><img style=" border: 1px solid grey; width: 43%; height: 43%"
-                                             src="cid:count_example">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
-                style="border: 1px solid grey;width: 43%; height: 43%" src="cid:cpu_utilization"></div>
-        <div style="text-align: center"><img style=" border: 1px solid grey; width: 43%; height: 43%"
-                                             src="cid:cpu_credit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
-                style="border: 1px solid grey;width: 43%; height: 43%" src="cid:cpu_utilization"></div>
+        <!-- CPU Utilization -->
+        <div style="text-align: center">
+            <h1>[ EC2 Instance CPU Utilization ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:bmt_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:bpn_cid_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div style="text-align: center">
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:cms_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:dbot_inf_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:vip_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div style="text-align: center">
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:voc_waf_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
         <br/><br/>
+
+        <!-- Memory Utilization -->
+        <div style="text-align: center">
+            <h1>[ EC2 Instance Memory Utilization ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:bpn_cid_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:cms_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div style="text-align: center">
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:dbot_inf_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:vip_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br/>
+        <!-- RDS CPU Utilization -->
+        <div style="text-align: center">
+            <h1>[ RDS CPU Utilization ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_cid_cms_rds_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:dbt_log_mdp_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:mis_rts_trd_memory_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br/>
+
+        <!-- RDS WriteIOPS -->
+        <div style="text-align: center">
+            <h1>[ RDS Write IOPS ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_cid_cms_dbt_write_iops"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:log_mdp_mis_rts_trd_write_iops"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br/>
+
+        <!-- RDS ReadIOPS -->
+        <div style="text-align: center">
+            <h1>[ RDS Read IOPS ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_cid_cms_dbt_read_iops"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:log_mdp_mis_rts_trd_read_iops"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br/>
+
+        <!-- RDS Write Latency-->
+        <div style="text-align: center">
+            <h1>[ RDS Write Latency ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_cid_cms_dbt_write_latency"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:log_mdp_mis_rts_trd_write_latency"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br/>
+
+        <!-- RDS Read Latency-->
+        <div style="text-align: center">
+            <h1>[ RDS Read Latency ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:bdp_cid_cms_dbt_read_latency"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:log_mdp_mis_rts_trd_read_latency"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br/>
+
+
+        <!-- RedShift CPU Utilization -->
+        <div style="text-align: center">
+            <h1>[ RedShift CPU Utilization ]</h1>
+            <img style=" border: 1px solid grey; width: 30%; height: 30%" src="cid:leader_0123_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img style="border: 1px solid grey;width: 30%; height: 30%" src="cid:4567_cpu_utilization"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
     </div>
 </div>
 </body>
 </html>
+
