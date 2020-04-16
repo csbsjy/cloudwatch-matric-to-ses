@@ -137,6 +137,7 @@ metric_sources = [
             ["...", "i-09019adda8ebade1b"]
         ]
     },
+
     {
         "view": "timeSeries",
         "stacked": False,
@@ -149,6 +150,7 @@ metric_sources = [
             ["...", "i-01a0b03ac0264db59"]
         ]
     },
+
     {
         "view": "timeSeries",
         "stacked": False,
@@ -179,7 +181,7 @@ metric_sources = [
         "view": "timeSeries",
         "stacked": False,
         "region": "ap-northeast-2",
-        "title": "BDP, CID, CMS - CPU Utilization",
+        "title": "BDP, CID, CMS - RDS CPU Utilization",
         "stat": "Average",
         "period": 300,
         "metrics": [
@@ -202,6 +204,7 @@ metric_sources = [
             ["...", "ldps-prd-mdp-mysql"]
         ]
     },
+
     {
         "view": "timeSeries",
         "stacked": False,
@@ -341,7 +344,6 @@ metric_sources = [
             ["...", "ldps-prd-trd-mysql"]
         ]
     },
-
 
     ## RedShift CPU Utilization
     {
